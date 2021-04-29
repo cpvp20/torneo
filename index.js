@@ -17,7 +17,7 @@ app.use(express.static(__dirname + '/'));
 var upload = multer({
   storage: multerS3({
     s3: s3,
-    bucket: 'some-bucket',
+    bucket: 'torneo-bucket',
     metadata: function (req, file, cb) {
       cb(null, {
         fieldName: file.fieldname
